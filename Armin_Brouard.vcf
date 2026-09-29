@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Brouard;Armin;;;
+FN:Armin Brouard
+ORG:Geneva Institute of Technology
+TITLE:Étudiant en informatique – Infrastructure, Réseaux & Cybersécurité
+TEL;TYPE=CELL:+33762148938
+EMAIL;TYPE=INTERNET:armin.brouard@git.swiss
+URL:https://ar-br.github.io
+item1.URL:https://www.linkedin.com/in/armin-brouard-40b1853b9/
+item1.X-ABLabel:LinkedIn
+item2.URL:https://github.com/ar-br
+item2.X-ABLabel:GitHub
+ADR;TYPE=HOME:;;;Saint-Pierre-en-Faucigny;;;France
+NOTE:Rencontré au Swiss IT Forum – recherche de stage en réseau, systèmes ou support informatique à Genève.
+END:VCARD

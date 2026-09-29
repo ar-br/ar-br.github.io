@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Armin Brouard · Infrastructure, Réseaux & Cybersécurité</title>
+<meta name="description" content="Armin Brouard, étudiant en informatique au Geneva Institute of Technology. Portfolio GitHub, CV, LinkedIn et contact.">
+<meta property="og:title" content="Armin Brouard · Infrastructure, Réseaux & Cybersécurité">
+<meta property="og:description" content="Étudiant en 1ère année d'informatique au GIT (Genève). Recherche de stage en réseau, systèmes ou support.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232563eb'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' fill='white' text-anchor='middle'%3EAB%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#f3f5f9; --card:#ffffff; --text:#0f172a; --muted:#5b6475; --line:#e3e7ee;
+    --accent:#2563eb; --accent-2:#1d4ed8; --chip:#eef3ff; --chip-text:#1e3a8a; --btn:#f6f8fb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0b1220; --card:#111a2c; --text:#e8edf6; --muted:#9aa6bb; --line:#22304a;
+      --accent:#3b82f6; --accent-2:#60a5fa; --chip:#18253f; --chip-text:#bcd3ff; --btn:#16213a;
+    }
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    -webkit-font-smoothing:antialiased; min-height:100vh;
+    display:flex; justify-content:center; padding:28px 16px 40px;
+  }
+  .card{
+    width:100%; max-width:420px; background:var(--card); border:1px solid var(--line);
+    border-radius:24px; overflow:hidden; box-shadow:0 10px 40px rgba(15,23,42,.08);
+  }
+  .banner{
+    height:92px;
+    background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 55%,#2563eb 100%);
+    position:relative;
+  }
+  .banner::after{
+    content:""; position:absolute; inset:0;
+    background-image:radial-gradient(rgba(255,255,255,.18) 1px,transparent 1px);
+    background-size:14px 14px; opacity:.5;
+  }
+  .avatar{
+    width:88px; height:88px; border-radius:50%; margin:-44px auto 0; position:relative; z-index:1;
+    background:linear-gradient(135deg,#2563eb,#1e3a8a); color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    font-weight:700; font-size:30px; letter-spacing:1px; border:4px solid var(--card);
+  }
+  .head{text-align:center; padding:12px 24px 4px}
+  h1{font-size:24px; margin:4px 0 6px; letter-spacing:.2px}
+  .role{margin:0; color:var(--muted); font-size:14.5px; line-height:1.45}
+  .school{margin:8px 0 0; font-size:13.5px; color:var(--muted)}
+  .status{
+    display:inline-flex; align-items:center; gap:8px; margin:14px 0 2px;
+    font-size:13px; font-weight:600; color:var(--chip-text); background:var(--chip);
+    padding:7px 12px; border-radius:999px;
+  }
+  .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.2)}
+  .actions{padding:18px 20px 6px; display:grid; gap:10px}
+  a.btn{
+    display:flex; align-items:center; gap:14px; text-decoration:none; color:var(--text);
+    background:var(--btn); border:1px solid var(--line); border-radius:14px;
+    padding:14px 16px; font-weight:600; font-size:15.5px; transition:transform .08s, border-color .15s;
+  }
+  a.btn:active{transform:scale(.985)}
+  a.btn:hover{border-color:var(--accent)}
+  a.btn small{display:block; font-weight:400; color:var(--muted); font-size:12.5px; margin-top:2px}
+  a.btn .ico{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex:none}
+  a.btn .go{margin-left:auto; color:var(--muted); flex:none}
+  a.primary{background:var(--accent); border-color:var(--accent); color:#fff}
+  a.primary small{color:rgba(255,255,255,.85)}
+  a.primary .ico{background:rgba(255,255,255,.18)}
+  a.primary .go{color:#fff}
+  .i-gh{background:#0f172a;color:#fff}
+  @media (prefers-color-scheme: dark){ .i-gh{background:#e8edf6;color:#0f172a} }
+  .i-in{background:#0a66c2;color:#fff}
+  .i-cv{background:#ef4444;color:#fff}
+  .row{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+  .row a.btn{justify-content:center; padding:12px; font-size:14.5px}
+  .row a.btn .ico{width:30px;height:30px;border-radius:8px;background:var(--chip);color:var(--accent)}
+  .section{padding:14px 22px 4px}
+  .section h2{font-size:12px; letter-spacing:1.6px; text-transform:uppercase; color:var(--muted); margin:0 0 10px}
+  .chips{display:flex; flex-wrap:wrap; gap:7px}
+  .chip{font-size:12.5px; padding:6px 10px; border-radius:8px; background:var(--chip); color:var(--chip-text); font-weight:500}
+  ul.proj{list-style:none; margin:0; padding:0; display:grid; gap:8px}
+  ul.proj li{font-size:13.5px; line-height:1.4; padding-left:16px; position:relative; color:var(--text)}
+  ul.proj li::before{content:""; position:absolute; left:2px; top:7px; width:6px; height:6px; border-radius:2px; background:var(--accent)}
+  footer{text-align:center; color:var(--muted); font-size:12px; padding:18px 20px 22px; border-top:1px solid var(--line); margin-top:18px}
+  svg{display:block}
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="banner" aria-hidden="true"></div>
+  <div class="avatar" aria-hidden="true">AB</div>
+
+  <header class="head">
+    <h1>Armin Brouard</h1>
+    <p class="role">Étudiant en 1ère année d'informatique<br>Infrastructure, Réseaux &amp; Cybersécurité</p>
+    <p class="school">Geneva Institute of Technology · Genève</p>
+    <div class="status"><span class="dot"></span>Recherche de stage : réseau, systèmes, support</div>
+  </header>
+
+  <nav class="actions">
+    <a class="btn primary" href="Armin_Brouard.vcf" download="Armin_Brouard.vcf">
+      <span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></span>
+      <span>Ajouter à mes contacts<small>Téléphone, e-mail et liens en 1 clic</small></span>
+      <span class="go"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+    </a>
+
+    <a class="btn" href="https://github.com/ar-br/it-infrastructure-labs" target="_blank" rel="noopener">
+      <span class="ico i-gh"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg></span>
+      <span>Portfolio GitHub<small>5 projets documentés étape par étape</small></span>
+      <span class="go"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+    </a>
+
+    <a class="btn" href="https://www.linkedin.com/in/armin-brouard-40b1853b9/" target="_blank" rel="noopener">
+      <span class="ico i-in"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.3 21 14.7V21h-4v-5.6c0-1.34-.03-3.06-1.86-3.06-1.87 0-2.15 1.46-2.15 2.96V21H9z"/></svg></span>
+      <span>LinkedIn<small>Mon profil professionnel</small></span>
+      <span class="go"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+    </a>
+
+    <a class="btn" href="CV_Armin_Brouard.pdf" target="_blank" rel="noopener">
+      <span class="ico i-cv"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg></span>
+      <span>Mon CV<small>PDF · 1 page</small></span>
+      <span class="go"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+    </a>
+
+    <div class="row">
+      <a class="btn" href="tel:+33762148938">
+        <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+        Appeler
+      </a>
+      <a class="btn" href="mailto:armin.brouard@git.swiss?subject=Swiss%20IT%20Forum%20%E2%80%93%20Stage">
+        <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+        E-mail
+      </a>
+    </div>
+  </nav>
+
+  <section class="section">
+    <h2>Compétences</h2>
+    <div class="chips">
+      <span class="chip">VMware ESXi / vCenter</span>
+      <span class="chip">Windows Server</span>
+      <span class="chip">Active Directory</span>
+      <span class="chip">PowerShell</span>
+      <span class="chip">Linux (Ubuntu)</span>
+      <span class="chip">Droits NTFS / secpol</span>
+      <span class="chip">Sysprep / Clonezilla</span>
+      <span class="chip">TCP/IP</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Projets récents</h2>
+    <ul class="proj">
+      <li>Installation d'ESXi 8 sur serveur HP ProLiant et déploiement de vCenter</li>
+      <li>Déploiement standardisé de postes Windows par image (Sysprep, Clonezilla)</li>
+      <li>Sécurisation d'un poste multi-utilisateurs (NTFS, stratégie de sécurité)</li>
+      <li>Serveur personnel : ESXi, Windows Server et domaine Active Directory</li>
+    </ul>
+  </section>
+
+  <footer>Genève · Annemasse &nbsp;·&nbsp; armin.brouard@git.swiss</footer>
+</main>
+</body>
+</html>
